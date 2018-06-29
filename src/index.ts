@@ -1,5 +1,3 @@
-class ObjectHasNoPropertyError extends Error {}
-
 interface PassedObject {
   readonly [key: string]: any;
 }
@@ -10,7 +8,7 @@ const objectFetch = (obj: PassedObject, property: string): any => {
     return obj[property];
   }
 
-  throw new ObjectHasNoPropertyError(`No such property: ${property}`);
+  throw new ReferenceError(`No such property: ${property}`);
 };
 
 export default objectFetch;

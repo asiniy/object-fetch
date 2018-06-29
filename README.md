@@ -11,5 +11,5 @@ import objectFetch from 'object-fetch'
 const obj = { a: 'b' }
 
 objectFetch(obj, 'a') // => 'b'
-objectFetch(obj, 'nonexistant') // throws ObjectHasNoPropertyError
+objectFetch(obj, 'nonexistant') // throws ReferenceError
 ```

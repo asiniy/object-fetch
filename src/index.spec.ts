@@ -12,5 +12,6 @@ test('power', async t => {
   const error = await t.throws(() => {
     objectFetch(object, 'c');
   });
+  t.is(error.name, 'ReferenceError');
   t.is(error.message, 'No such property: c');
 });
